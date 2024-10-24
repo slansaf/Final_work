@@ -1,6 +1,6 @@
-package ru.gb.finalwork.animal.pack_animal;
+package ru.gb.finalwork.model.animal.pack_animal;
 
-import ru.gb.finalwork.animal.Animal;
+import ru.gb.finalwork.model.animal.Animal;
 
 import java.time.LocalDate;
 

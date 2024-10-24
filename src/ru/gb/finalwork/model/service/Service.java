@@ -1,17 +1,18 @@
-package ru.gb.finalwork.service;
+package ru.gb.finalwork.model.service;
 
-import ru.gb.finalwork.builder.AnimalBuilder;
-import ru.gb.finalwork.human_friend.HumanFriend;
-import ru.gb.finalwork.animal.Animal;
+import ru.gb.finalwork.model.builder.AnimalBuilder;
+import ru.gb.finalwork.model.human_friend.HumanFriend;
+import ru.gb.finalwork.model.animal.Animal;
+import ru.gb.finalwork.model.human_friend.HumanFriendable;
 
 import java.time.LocalDate;
 
 public class Service{
-    private HumanFriend humanFrand;
+    private HumanFriend<Animal> humanFrand;
     private AnimalBuilder builder;
 
     public Service() {
-        humanFrand = new HumanFriend();
+        humanFrand = new HumanFriend<>();
         builder = new AnimalBuilder();
     }
 

@@ -1,6 +1,6 @@
-package ru.gb.finalwork.animal;
+package ru.gb.finalwork.model.animal;
 
-import ru.gb.finalwork.human_friend.HumanFriendable;
+import ru.gb.finalwork.model.human_friend.HumanFriendable;
 
 import java.time.LocalDate;
 import java.time.Period;

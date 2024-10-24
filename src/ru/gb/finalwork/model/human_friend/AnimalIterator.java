@@ -1,6 +1,6 @@
-package ru.gb.finalwork.human_friend;
+package ru.gb.finalwork.model.human_friend;
 
-import ru.gb.finalwork.animal.Animal;
+import ru.gb.finalwork.model.animal.Animal;
 
 import java.util.Iterator;
 import java.util.List;

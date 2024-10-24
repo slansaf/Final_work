@@ -1,4 +1,4 @@
-package ru.gb.finalwork.animal.pet;
+package ru.gb.finalwork.model.animal.pet;
 
 import java.time.LocalDate;
 

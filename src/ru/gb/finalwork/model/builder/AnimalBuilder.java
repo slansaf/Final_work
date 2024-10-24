@@ -1,7 +1,7 @@
-package ru.gb.finalwork.builder;
+package ru.gb.finalwork.model.builder;
 
-import ru.gb.finalwork.animal.Animal;
-import ru.gb.finalwork.animal.pet.Cat;
+import ru.gb.finalwork.model.animal.Animal;
+import ru.gb.finalwork.model.animal.pet.Cat;
 
 import java.time.LocalDate;
 
