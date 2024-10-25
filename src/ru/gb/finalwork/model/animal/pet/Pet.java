@@ -1,6 +1,7 @@
 package ru.gb.finalwork.model.animal.pet;
 
 import ru.gb.finalwork.model.animal.Animal;
+import ru.gb.finalwork.model.human_friend.HumanFriendable;
 
 import java.time.LocalDate;
 

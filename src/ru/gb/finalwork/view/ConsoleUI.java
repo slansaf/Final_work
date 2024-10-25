@@ -1,5 +1,6 @@
 package ru.gb.finalwork.view;
 
+import ru.gb.finalwork.model.animal.pet.Pet;
 import ru.gb.finalwork.presenter.Presenter;
 
 import java.time.LocalDate;
@@ -24,12 +25,20 @@ public class ConsoleUI implements View{
 
         while (work) {
             System.out.println(mainMenu.menu());
-            String choiceStr = scanner.nextLine();
-            //проверка на валидность
-            int choice = Integer.parseInt(choiceStr);
-            mainMenu.execute(choice);
+            try {
+                String choiceStr = scanner.nextLine();
+                int choice = Integer.parseInt(choiceStr);
+                if (choice > mainMenu.size()) {
+                    throw new IllegalArgumentException("Выбранное значение не входит в допустимый диапазон.");
+                }
+                mainMenu.execute(choice);
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка! Введено неверное значение. Попробуйте снова.");
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
             }
         }
+    }
 
     public void finish() {
         work = false;
@@ -45,6 +54,24 @@ public class ConsoleUI implements View{
 
     public void getAnimalList() {
         presenter.getAnimalListInfo();
+    }
+
+    public void AnimalToTrain() {
+        System.out.print("Введите команду обучения: ");
+        String command = scanner.nextLine().trim();
+        System.out.println("Введите номер Id животного для обучения");
+        int id = Integer.parseInt(scanner.nextLine());
+        presenter.commandToLern(id, command);
+    }
+
+    public void ListOfCommands() {
+        System.out.println("Введите номер Id животного для обучения");
+        int id = Integer.parseInt(scanner.nextLine());
+        presenter.listOfCommands(id);
+    }
+
+    public void getTotalAnimalsCount(){
+        presenter.getTotalAnimalsCount();
     }
 
     public void addAnimal(){
@@ -67,4 +94,5 @@ public class ConsoleUI implements View{
     public void printAnswer(String answer) {
         System.out.println(answer);
     }
+
 }

@@ -2,8 +2,8 @@ package ru.gb.finalwork.model.animal.pet;
 
 import java.time.LocalDate;
 
-public class Humster extends Pet{
-    public Humster(long id, String type, String name, LocalDate birthDate) {
+public class Hamster extends Pet{
+    public Hamster(long id, String type, String name, LocalDate birthDate) {
         super(id,type, name, birthDate);
     }
 

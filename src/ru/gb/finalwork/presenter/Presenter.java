@@ -33,4 +33,17 @@ public class Presenter {
         service.sortByBirthDate();
         getAnimalListInfo();
     }
+
+    public void commandToLern(int id, String command) {
+        service.comandToLern(id, command);
+        getAnimalListInfo();
+    }
+
+    public void listOfCommands(int id) {
+        service.listOfCommands(id);
+    }
+
+    public void getTotalAnimalsCount(){
+        service.getTotalAnimalsCount();
+    }
 }

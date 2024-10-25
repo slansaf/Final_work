@@ -16,22 +16,21 @@ public class Animal implements HumanFriendable<Animal> {
 
     public Animal(long id, String type, String name, LocalDate birhtDate) {
         this.id = id;
+        this.type = type;
         this.name = name;
         this.birhtDate = birhtDate;
-        this.type = type;
     }
 
     public long getId() {
         return id;
     }
 
-
-    public List<String> getComands() {
-        return comands;
+    public String getType() {
+        return type;
     }
 
-    public void setComands(List<String> comands) {
-        this.comands = comands;
+    public List<String> getCommands() {
+        return comands;
     }
 
     public LocalDate getBirhtDate() {

@@ -1,5 +1,6 @@
 package ru.gb.finalwork.view;
 
+import ru.gb.finalwork.presenter.Presenter;
 import ru.gb.finalwork.view.commands.*;
 
 import java.util.ArrayList;
@@ -12,14 +13,17 @@ public class MainMenu {
         commands = new ArrayList<>();
         commands.add(new AddAnimal(consoleUI));
         commands.add(new GetAnimalListInfo(consoleUI));
+        commands.add(new AnimalToTrain(consoleUI));
+        commands.add(new ListOfCommands(consoleUI));
         commands.add(new SortByName(consoleUI));
         commands.add(new SotrByBirthDate(consoleUI));
+        commands.add(new TotalAnimalsCount(consoleUI));
         commands.add(new Finish(consoleUI));
     }
 
     public String menu(){
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Меню:\n");
+                stringBuilder.append("Меню:\n");
         for (int i = 0; i < commands.size(); i++) {
             stringBuilder.append(i+1);
             stringBuilder.append(". ");
@@ -27,7 +31,9 @@ public class MainMenu {
             stringBuilder.append("\n");
         }
         return stringBuilder.toString();
+
     }
+
 
     public void execute(int choice){
         Command command = commands.get(choice - 1);
